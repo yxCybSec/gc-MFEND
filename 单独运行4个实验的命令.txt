@@ -1,0 +1,65 @@
+M3FEND 四个主要实验的单独运行指令
+==========================================
+
+这4个命令分别对应 --mode m3fend 会运行的4个实验配置
+
+==========================================
+实验1: 中文数据集 - 3个领域
+==========================================
+cd M3FEND-main
+python run_experiments.py --mode single --dataset ch --domain_num 3 --model m3fend
+
+或者直接使用 main.py:
+python main.py --gpu 0 --lr 0.0001 --model_name m3fend --dataset ch --domain_num 3
+
+领域类别: 政治、医药健康、文体娱乐
+
+
+==========================================
+实验2: 中文数据集 - 6个领域
+==========================================
+cd M3FEND-main
+python run_experiments.py --mode single --dataset ch --domain_num 6 --model m3fend
+
+或者直接使用 main.py:
+python main.py --gpu 0 --lr 0.0001 --model_name m3fend --dataset ch --domain_num 6
+
+领域类别: 教育考试、灾难事故、医药健康、财经商业、文体娱乐、社会生活
+
+
+==========================================
+实验3: 中文数据集 - 9个领域
+==========================================
+cd M3FEND-main
+python run_experiments.py --mode single --dataset ch --domain_num 9 --model m3fend
+
+或者直接使用 main.py:
+python main.py --gpu 0 --lr 0.0001 --model_name m3fend --dataset ch --domain_num 9
+
+领域类别: 科技、军事、教育考试、灾难事故、政治、医药健康、财经商业、文体娱乐、社会生活
+
+
+==========================================
+实验4: 英文数据集 - 3个领域
+==========================================
+cd M3FEND-main
+python run_experiments.py --mode single --dataset en --domain_num 3 --model m3fend
+
+或者直接使用 main.py:
+python main.py --gpu 0 --lr 0.0001 --model_name m3fend --dataset en --domain_num 3
+
+领域类别: gossipcop、politifact、COVID
+
+
+==========================================
+使用说明
+==========================================
+
+1. 每个实验都是独立的，可以单独运行
+2. 每个实验大约需要 1-2 小时（取决于硬件）
+3. 结果会保存在: logs/json/m3fend.json
+4. 如果使用 main.py，结果也会保存在同一个文件中
+
+推荐使用方式:
+- 如果想一次性运行所有4个: 使用 --mode m3fend
+- 如果只想运行某个特定配置: 使用上面的单独命令
