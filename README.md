@@ -63,6 +63,8 @@ python main.py --gpu 0 --lr 0.0001 --model_name m3fend --dataset en --domain_num
 推荐使用方式:
 - 如果想一次性运行所有4个: 使用 --mode m3fend
 - 如果只想运行某个特定配置: 使用上面的单独命令
+
+得到方式：论文里提供的相应代码
   
 # Memory-Guided Multi-View Multi-Domain Fake News Detection (M<sup>3</sup>FEND)
 This is the official implementation of our paper **Memory-Guided Multi-View Multi-Domain Fake News Detection**, which has been published in TKDE. [Paper](https://ieeexplore.ieee.org/document/9802916)
